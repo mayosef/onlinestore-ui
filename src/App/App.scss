@@ -1,0 +1,62 @@
+
+@import './node_modules/bootstrap/scss/bootstrap';
+
+body {
+      
+        background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
+        color: #f7f7f7;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+
+      }
+
+
+
+
+ .welcome {
+     display:flex;
+     align-items:center;
+     justify-content: center;
+     align-content: center;
+     flex-direction: column;
+ }
+
+ .invoiceTable {
+     display: flex;
+     flex-direction: row;
+     color:red;
+     padding:1.5em;
+ }
+
+ .rowTable {
+     display:flex;
+     flex-direction: row;
+ }
+
+ .welcome {
+   display:flex;
+   align-content: center;
+   align-items:center;
+ }
+
+
+.user-avatar {
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+ }
+ .user-info {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+ }
+    .profile {
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(50, 50, 50, 0.15);
+  }

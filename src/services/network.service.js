@@ -1,3 +1,6 @@
+import cookie from 'react-cookies';
+
+
 export default class Network {
 
     getHeaders() {
@@ -10,7 +13,7 @@ export default class Network {
         return headers;
     }
         getToken() {
-            return document.cookie.split('user=')[1]
+            return cookie.load('user');
         }
         send(method, url, data) {
             return fetch('http://localhost:4000/api' + url, {
