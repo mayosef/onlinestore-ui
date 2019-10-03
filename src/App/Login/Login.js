@@ -31,7 +31,7 @@ export class Login extends Component {
     render() {
         return (
             <div className="container"> 
-                <div>
+                <div className="login-page">
                     <h2>LOGIN</h2>
                     <Formik 
                         onSubmit={this.send.bind(this)}
@@ -54,7 +54,7 @@ export class Login extends Component {
 
                             </div>
                             <div>
-                                <input className='btn btn-success'
+                                <input className='button-submit'
                                 disabled={this.state.submitting}
                                 type="submit" 
                                 value={this.state.submitting ? "Logging..." : "Login"} />

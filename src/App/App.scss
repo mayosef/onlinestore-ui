@@ -2,16 +2,8 @@
 @import './node_modules/bootstrap/scss/bootstrap';
 
 body {
-      
-        background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
-        color: #f7f7f7;
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-
-      }
-
-
-
+    background-color:white;
+}
 
  .welcome {
      display:flex;
@@ -60,3 +52,9 @@ body {
     padding: 1.5rem;
     box-shadow: 0 0.2rem 0.6rem rgba(50, 50, 50, 0.15);
   }
+
+  .cover {
+      background:url("https://www.petcurean.com/app/uploads/2019/03/Medically-Challenged_Blog-Header-800x440.jpg");
+      background-size: cover;
+  }
+  

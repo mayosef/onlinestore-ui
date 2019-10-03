@@ -1,15 +1,14 @@
 .container 		{
     justify-content: center; 
-    width:1200px; 
-    margin:30px auto 0; 
+    max-width:1200px; 
+    margin: 0 auto; 
     display:block; 
     background:#FFF;
     padding:10px 50px 50px;
-}
+  }
 .register {
   position: relative;
   align-items: center;
-  margin-left:240px
 }
 
 .register-form {
@@ -23,7 +22,18 @@
     display:block;
     width:600px;
     border:none;
+    overflow: hidden;
     border-bottom:1px solid #757575;
+    transition:0.2s ease all; 
+-moz-transition:0.2s ease all; 
+-webkit-transition:0.2s ease all;
+}
+.bar:before {
+left:50%;
+}
+.bar:after {
+right:50%; 
+
 }
 input:focus 		{ outline:none; }
 

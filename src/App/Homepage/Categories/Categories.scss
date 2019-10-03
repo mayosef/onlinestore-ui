@@ -19,21 +19,25 @@
     top: 0;
     display: inline-block;
     text-decoration: none;
-    color:white;
+    color:#131f38;
     width:auto;
     font-size:14px;
 }
  .category-menu {
+   width:100px;
+   height: 20px;
     flex: 1 1 auto;
     color:white;
     margin: 10px;
-    padding: 20px;
-    border: 2px solid #f7f7f7;
+    padding: 15px;
+    border-bottom: 2px solid #f7f7f7;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     position: relative;
+    background: linear-gradient(135deg, rgb(75, 121, 110) 0%,rgb(24, 54, 88) 0%,rgb(66, 97, 90) 0%,rgb(68, 104, 121) 100%);
     justify-content: center;
+    border-radius:5%;
     align-items: center;
     overflow:hidden;
     transition: .3s;
@@ -48,16 +52,10 @@
       background: #f7f7f7;
     }
     
-    &:nth-of-type(5):after {
-      height: 120%;
-      left: -10%;
-      transform: skewX(15deg);
-      z-index: -1;
-    }
     &:hover {
       cursor: pointer;
       text-decoration: none;
-      color:#999;  
+      color:rgb(221, 216, 216);  
       &:after {
         width: 100%;
         left: 0;

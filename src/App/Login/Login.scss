@@ -1,0 +1,115 @@
+.container {
+  max-width: 1200px;
+  height: 800px;
+  margin:center;
+  padding:15px;
+  display: flex;
+}
+
+
+
+.login-form {
+  position:relative; 
+  margin-bottom:45px;
+}
+
+.login-input {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:600px;
+  color: #242020;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  border:none;
+  border-bottom: 1px solid black;
+}
+input:focus 		{ outline:none; }
+
+
+label  {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:-24px;
+  text-transform: uppercase;
+}
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+width:0%;
+}
+.bar 	{ position:relative; display:block; width:600px; }
+.bar:before, .bar:after 	{
+content:'';
+height:2px; 
+width:0;
+bottom:1px; 
+position:absolute;
+background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
+transition:0.2s ease all; 
+-moz-transition:0.2s ease all; 
+-webkit-transition:0.2s ease all;
+}
+.bar:before {
+left:50%;
+}
+.bar:after {
+right:50%; 
+}
+
+
+
+.alert-login {
+color:#9999; 
+font-size:11px;
+text-transform: upperCase;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+width:50%;
+}
+
+.button-submit {
+  display: inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:rgb(16, 88, 121);
+  text-align:center;
+  transition: all 0.2s;
+  }
+
+  .button-submit:hover {
+  color:#000000;
+  background-color:rgb(52, 207, 212);
+  }
+    @media all and (max-width:30em){
+      .button-submit {
+    display:block;
+    margin:0.4em auto;
+      }
+      
+    }
+    @media screen and (max-width: 700px) {
+      .login-page {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    }
+    /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+    @media screen and (max-width: 400px) {
+      .login-page {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    }

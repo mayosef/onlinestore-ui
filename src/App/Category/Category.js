@@ -34,7 +34,10 @@ class Category extends React.Component {
                     <div>
                         {product.price}$
                     </div>
-    
+                    <div>
+                        <img src={'http://localhost:4000/products' + product.image} />
+                    </div>
+                   
                 </div>
                  </Link>
             })}
