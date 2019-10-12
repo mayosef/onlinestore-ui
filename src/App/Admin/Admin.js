@@ -1,7 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Link, Route} from "react-router-dom"
-import Products from './Products/Products';
+import createProduct from './Products/createProduct/createProduct';
+// import Product from './Products/Products';
+
+
 import UserService from '../services/user.service';
+import Products from './Products/Products';
 
 class Admin extends React.Component {
     constructor(props) {
@@ -25,18 +29,34 @@ class Admin extends React.Component {
                     <div className="col-sm-3">
                         <ul className="list-group">
                             <li className="list-group-item">
-                                <Link to="/admin/products">Products</Link>
+                                <ul>
+                                    <li>
+                                        <Link to="/admin/products">Products</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/admin/products/create-product">Create Product</Link>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li className="list-group-item">
+                                <ul>
+                                    <li>
+                                        <Link to="/admin/categories">Categories</Link>
+                                    </li>
+                                </ul>
                             </li>
                             <li className="list-group-item">
-                                <Link to="/admin/categories">Categories</Link>
-                            </li>
-                            <li className="list-group-item">
-                                <Link to="/admin/users">Users</Link>
+                                <ul>
+                                    <Link to="/admin/users">Users</Link>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                     <div className="col-sm-9">
-                        <Route path="/admin/products" component={Products} />
+                        <Route path="/admin/products" exact component={Products} />
+                        <Route path="/admin/products/create-product" component={createProduct} />
+
                     </div>
                 </div>
             </div>

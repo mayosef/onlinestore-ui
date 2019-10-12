@@ -5,7 +5,7 @@ import CartService from '../../services/cart.service';
 import Categories from '../../Homepage/Categories/Categories';
 import productService from '../../services/product.service';
 
-class Product extends React.Component {
+class createProduct extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -69,4 +69,4 @@ class Product extends React.Component {
     )
     }
 }
- export default Product;
+ export default createProduct;

@@ -1,0 +1,42 @@
+.col-sm-6 {
+  display:relative;
+  align-items: center;
+  margin-bottom:20px;
+}
+.container 		{
+    justify-content: center; 
+    max-width:1200px; 
+    margin: 0 auto; 
+    align-items: center;
+    background:#FFF;
+    padding:10px 50px 50px;
+  }
+.add-product-form {
+  position: relative;
+  align-items: center;
+}
+
+.form-group {
+    position:relative; 
+    margin-bottom:45px;
+}
+
+
+
+
+label  {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:-25px;
+    text-transform: uppercase;
+  }
+
+
+
+
+
+

@@ -12,6 +12,9 @@ class ProductService extends Network {
             'Content-Type': 'muiltipart/form-data'
         })
     }
+    getAll() {
+        return this.send('GET', '/product');
+    }
 
     getByCategoryId(categoryId) {
         return this.send('GET', `/category/${categoryId}/product`)

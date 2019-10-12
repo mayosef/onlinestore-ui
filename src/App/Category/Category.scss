@@ -11,7 +11,7 @@
 }
 .product-container {
     width:300px;
-    height:300px;
+    height:310px;
     color:#999;
     background: white;
     display: flex;
@@ -23,6 +23,7 @@ text-decoration: none;
 .image-product {
     widows: 250px;
     height:250px;
+    margin-top:20px;
 }
 
 .Category {
@@ -33,4 +34,13 @@ text-decoration: none;
     grid-template-columns: 1fr 1fr 1fr 0;
     grid-gap:4%;
     width:800px;   
+}
+
+.product-buttons {
+    width:150px;
+}
+
+button {
+    width:70px;
+    height: 50px;
 }
