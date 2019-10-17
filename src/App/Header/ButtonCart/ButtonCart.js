@@ -4,15 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart ,  } from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import './ButtonCart.scss'
+import { connect } from 'react-redux';
+
 class ButtonCart extends React.Component {
-    productCount() {
-        return CartService.getAll().length;
-    }
     render() {
         return(
             <div className="CartButton badge badge-light">
             <FontAwesomeIcon icon={faShoppingCart} size="2x" className="icon"/>
-                 {this.productCount()}
+                 {this.props.itemsCount}
                 <div>
                 <FontAwesomeIcon icon={faWhatsapp} size="2x" className="icon" />
                 </div>
@@ -20,6 +19,10 @@ class ButtonCart extends React.Component {
         ) 
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        itemsCount:state.cartItemsCount
+    }
+}
 
-
-export default ButtonCart;
+export default connect(mapStateToProps)(ButtonCart);

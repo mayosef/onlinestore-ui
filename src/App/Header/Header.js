@@ -4,6 +4,9 @@ import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome , faSignInAlt, faUserPlus, faDog, faIdCard, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import ButtonCart from './ButtonCart/ButtonCart'
+import cookie from 'react-cookies';
+
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +18,10 @@ class Header extends React.Component {
     handleScroll() {
         this.setState({scroll: window.scrollY});
     }
-  
+    logout() {
+      cookie.remove('user')
+    }
+
   // componentDidMount() {
   //       const el = document.querySelector('nav');
   //       this.setState({top: el.offsetTop, height: el.offsetHeight});
@@ -27,11 +33,10 @@ class Header extends React.Component {
             document.body.style.paddingTop = `${this.state.height}px` :
             document.body.style.paddingTop = 0;
     }
-  
+
 
     render() {
         return (
-            
             <header>
               <nav className={this.state.scroll > this.state.top ? "fixed-nav" : ""}>
                 <ul className="ul-menu">
@@ -49,14 +54,17 @@ class Header extends React.Component {
                   <FontAwesomeIcon icon={faIdCard} /></li>
                   <li className="nav-item"><Link to="/cart">Cart</Link>
                   <FontAwesomeIcon icon={faDog} /></li>
-                  <li className="nav-item"><Link to="/admin">Admin</Link></li>                  
+                  <li className="nav-item"><Link to="/admin">Admin</Link></li>
                 </ul>
                 <div className="cart">
                 <ButtonCart className="cart-btn" />
+
                 </div>
+                <button onClick={this.logout.bind(this)}>Logout</button>             
+
               </nav>
             </header>
-            
+    
         )
     }
 }

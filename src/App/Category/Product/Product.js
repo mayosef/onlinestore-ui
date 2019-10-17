@@ -1,9 +1,12 @@
 import React from 'react';
 import ProductService from '../../services/product.service';
 import './Product.scss'
-import CartService from '../../services/cart.service';
 import Categories from '../../Homepage/Categories/Categories';
 import productService from '../../services/product.service';
+import { addToCart } from '../../redux/actions'
+import { connect } from 'react-redux';
+
+
 
 class createProduct extends React.Component {
   constructor(props) {
@@ -19,7 +22,7 @@ class createProduct extends React.Component {
   }
             
   addToCart() {
-    CartService.add(this.state.product.id, 1)
+    this.props.addToCart(this.state.product.id)
   }
     render() {
     return (
@@ -50,14 +53,15 @@ class createProduct extends React.Component {
       <div className="container">
        
         <div className="left-side-product">
-          <img src={this.state.product.thumbnailUrl} />
+          <div>
+            <img className="product.image" src={`http://localhost:4000/products/${this.state.product.image}`} />
+          </div>
         </div>
         <div className="right-side-product">
             <div className="product-description">
               <div className="product-category">Category title</div>
               <div className="product-title">{this.state.product.title}</div>
               <div className="description">{this.state.product.description}</div>
-              {/* <div><img src={'http://localhost:4000/' + product.image} /></div> */}
             </div>
             <div className="product-price">
                 <div className="price">{this.state.product.price}$</div>
@@ -69,4 +73,6 @@ class createProduct extends React.Component {
     )
     }
 }
- export default createProduct;
+ export default connect(null, {
+    addToCart
+ })(createProduct);
